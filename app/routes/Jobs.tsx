@@ -1,15 +1,15 @@
-import HN from './index'
-import { storyLoader } from '~/utils'
+import HN from "./index";
+import { storyLoader } from "~/utils";
 
-import { storyHint, commonlink2 } from '~/components/index.css'
+import { storyHint, commonlink2 } from "~/components/index.css";
 
-export const loader = storyLoader
+export const loader = storyLoader;
 
-function StoryHint () {
+function StoryHint() {
   return (
     <tr>
-        <td colSpan={2}></td>
-        <td>
+      <td colSpan={2}></td>
+      <td>
         <div className={storyHint}>
           {"These are jobs at YC startups. See more at "}
           <a
@@ -21,13 +21,11 @@ function StoryHint () {
           </a>
           {"."}
         </div>
-        </td>
-      </tr> 
-  )
+      </td>
+    </tr>
+  );
 }
 
-export default function Jobs () {
-  return (
-    <HN StoryHint={StoryHint} />
-  )
-};
+export default function Jobs() {
+  return <HN StoryHint={StoryHint} />;
+}

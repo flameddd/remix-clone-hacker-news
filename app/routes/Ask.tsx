@@ -1,6 +1,6 @@
-import HN from './index'
-import { storyLoader } from '~/utils'
+import HN from "./index";
+import { storyLoader } from "~/utils";
 
-export const loader = storyLoader
+export const loader = storyLoader;
 
 export default HN;

@@ -1,9 +1,9 @@
-import HN from './index'
-import { storyLoader } from '~/utils'
+import HN from "./index";
+import { storyLoader } from "~/utils";
 
-import { storyHint, commonlink2 } from '~/components/index.css'
+import { storyHint, commonlink2 } from "~/components/index.css";
 
-export const loader = storyLoader
+export const loader = storyLoader;
 
 function StoryHint() {
   return (
@@ -31,11 +31,9 @@ function StoryHint() {
         </div>
       </td>
     </tr>
-  )
+  );
 }
 
 export default function Show() {
-  return (
-    <HN StoryHint={StoryHint} />
-  )
-};
+  return <HN StoryHint={StoryHint} />;
+}
