@@ -2,10 +2,19 @@ import { style, globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
 export const vote = style({
-  display: "inline-block",
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
   width: 16,
   border: 0,
   padding: "0 4px",
+
+  "@media": {
+    "screen and (max-width: 750px)": {
+      width: 12,
+      padding: "0 3px",
+    },
+  },
 });
 
 globalStyle(`${vote} > a`, {

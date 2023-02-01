@@ -28,7 +28,7 @@ export const tdIndent = style({
       width: "calc(var(--trIndentSpace) * 4px)",
     },
     "screen and (max-width: 400px)": {
-      width: "calc(var(--trIndentSpace) * 2px)",
+      width: "calc(var(--trIndentSpace) * 1px)",
     },
   },
 });
