@@ -39,83 +39,94 @@ export default function User() {
     }`.padStart(2, "0")}-${`${createdDate.getDate()}`.padStart(2, "0")}`;
   }
 
+  if (!data) {
+    return (
+      <>
+        <tr className={styles.separator} />
+        <tr>
+          <td>{`Can not find User: ${userId || ""}`}</td>
+        </tr>
+        <tr className={styles.separator} />
+      </>
+    );
+  }
+
   return (
     <>
       <tr className={styles.separator} />
-      {!data ? (
-        <td>{`Can not find User: ${userId || ""}`}</td>
-      ) : (
-        <>
-          <tr>
-            <td valign="top">user:</td>
-            <td>
-              <a
-                target="_blank"
-                href={`https://news.ycombinator.com/user?id=${data.id}`}
-                className={userStyles.link1}
-              >
-                {data.id}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">created:</td>
-            <td>
-              <a
-                target="_blank"
-                href={`https://news.ycombinator.com/front?day=${dateLinkStr}&birth=${data.id}`}
-                className={userStyles.link1}
-              >
-                {dateStr}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">karma:</td>
-            <td>884</td>
-          </tr>
-          <tr>
-            <td valign="top">about:</td>
-            <td style={{ overflow: "hidden" }}></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <a
-                target="_blank"
-                href={`https://news.ycombinator.com/submitted?id=${data.id}`}
-                className={userStyles.link2}
-              >
-                submissions
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <a
-                target="_blank"
-                href={`https://news.ycombinator.com/threads?id=${data.id}`}
-                className={userStyles.link2}
-              >
-                comments
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <a
-                target="_blank"
-                href={`https://news.ycombinator.com/favorites?id=${data.id}`}
-                className={userStyles.link2}
-              >
-                favorites
-              </a>
-            </td>
-          </tr>
-        </>
-      )}
+      <>
+        <tr>
+          <td valign="top">user:</td>
+          <td>
+            <a
+              target="_blank"
+              href={`https://news.ycombinator.com/user?id=${data.id}`}
+              className={userStyles.link1}
+            >
+              {data.id}
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">created:</td>
+          <td>
+            <a
+              target="_blank"
+              href={`https://news.ycombinator.com/front?day=${dateLinkStr}&birth=${data.id}`}
+              className={userStyles.link1}
+            >
+              {dateStr}
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">karma:</td>
+          <td>{data.karma}</td>
+        </tr>
+        <tr>
+          <td valign="top">about:</td>
+          <td
+            style={{ overflow: "hidden" }}
+            dangerouslySetInnerHTML={{ __html: data.about }}
+          ></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a
+              target="_blank"
+              href={`https://news.ycombinator.com/submitted?id=${data.id}`}
+              className={userStyles.link2}
+            >
+              submissions
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a
+              target="_blank"
+              href={`https://news.ycombinator.com/threads?id=${data.id}`}
+              className={userStyles.link2}
+            >
+              comments
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a
+              target="_blank"
+              href={`https://news.ycombinator.com/favorites?id=${data.id}`}
+              className={userStyles.link2}
+            >
+              favorites
+            </a>
+          </td>
+        </tr>
+      </>
       <tr className={styles.separator} />
     </>
   );

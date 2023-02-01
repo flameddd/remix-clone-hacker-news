@@ -7,8 +7,6 @@ export default function More() {
   const [searchParams] = useSearchParams();
   const page: number = Number(searchParams.get("page")) || 1;
 
-  // console.log(location);
-
   return (
     <>
       <tr className={separator} />

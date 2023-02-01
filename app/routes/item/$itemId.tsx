@@ -39,6 +39,7 @@ type itemType = {
   comments: Array<comment>;
   domain: string;
   parent?: number;
+  error?: string;
 };
 
 function getNumOfComments(comments: Array<comment>): number {
@@ -53,7 +54,10 @@ export const loader = async ({ params }: LoaderArgs) => {
   );
 
   if (res.status === 404) {
-    return new Response("Item not found.", { status: 404 });
+    const response = new Response(
+      JSON.stringify({ status: 404, error: `Item ${params.itemId} not found.` })
+    );
+    return json(await response.json());
   }
 
   return json(await res.json());
@@ -64,8 +68,10 @@ function Comment(
 ): React.ReactElement {
   const [commentOpen, setCommentOpen] = useState<boolean>(true);
   const numOfComments = getNumOfComments(props.comments);
+
+  // Less indent when comment are too deep level
   const indentSpace =
-    props.level < 3 ? props.level : 2 + (props.level - 2) * 0.1; // indent less when too deep level
+    props.level < 3 ? props.level : 2 + (props.level - 2) * 0.1;
 
   return (
     <>
@@ -183,6 +189,18 @@ function Comment(
 export default function Item() {
   const data = useLoaderData<itemType>();
   const isInternalLink = !!data.url?.includes("item?id=");
+
+  if (data?.error) {
+    return (
+      <>
+        <tr className={styles.separator} />
+        <tr>
+          <td>{data.error}</td>
+        </tr>
+        <tr className={styles.separator} />
+      </>
+    );
+  }
 
   return (
     <>

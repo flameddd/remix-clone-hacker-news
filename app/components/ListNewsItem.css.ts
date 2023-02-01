@@ -36,14 +36,13 @@ export const domain = style({
 });
 
 export const commonlink = style({
-  color: vars.color.text3,
+  color: `${vars.color.text3}!important`,
   ":hover": {
     textDecoration: "underline",
   },
 });
 
 export const separator = style({
-  display: "inline-block",
   height: 10,
 
   "@media": {

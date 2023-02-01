@@ -35,6 +35,7 @@ globalStyle("pre", {
 
 export const root = style({
   width: "85%",
+  minHeight: "350px",
   backgroundColor: vars.color.bg2,
   overflow: "hidden",
   "@media": {
