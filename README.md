@@ -34,6 +34,9 @@ https://github.com/cheeaun/node-hnapi
 - header cache 感覺可以加一下
 - http://127.0.0.1:8787/item/34591625   測試版面的文章
 
+Error handle
+- https://remix-clone-hacker-news.flameddd1.workers.dev/item/3460231118
+
 ## Development
 
 You will be running two processes during development:

@@ -4,6 +4,9 @@ import { vars } from "./theme.css";
 globalStyle("html", {
   fontSize: "16px",
   fontFamily: "Verdana, Geneva, sans-serif",
+
+  // prevent iOS safari change font size when orientation change
+  "-webkit-text-size-adjust": "100%",
 });
 
 globalStyle("body", {
@@ -18,7 +21,8 @@ globalStyle("body", {
   },
 });
 
-globalStyle("a", {
+globalStyle("a:link", {
+  color: vars.color.text1,
   textDecoration: "none",
 });
 

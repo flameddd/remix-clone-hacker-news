@@ -39,10 +39,12 @@ export default function ListNewsItem(props: News): JSX.Element {
               target="_blank"
               href={`https://news.ycombinator.com/vote?id=${props.id}&how=up&goto=new`}
               className={styles.upVote}
-            />
+            >
+              {"▲"}
+            </a>
           )}
         </td>
-        <td>
+        <td valign="top">
           <span>
             {isInternalLink ? (
               <Link to={`/item/${props.id}`} className={styles.title}>

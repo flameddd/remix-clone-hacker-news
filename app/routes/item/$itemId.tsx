@@ -82,9 +82,11 @@ function Comment(
             target="_blank"
             href={`https://news.ycombinator.com/vote?id=${props.id}&how=up&goto=item?id=${props.id}`}
             className={styles.upVote}
-          />
+          >
+            {"▲"}
+          </a>
         </td>
-        <td>
+        <td valign="top">
           <span>
             <Link to={`/user/${props.user}`} className={styles.commonlink}>
               {props.user}
@@ -184,16 +186,19 @@ export default function Item() {
 
   return (
     <>
-      <tr>
+      <tr id={`${data.id}`}>
         <td align="right" valign="top" width="8px" />
         <td valign="top" className={styles.vote} data-upvote={true}>
           <a
             target="_blank"
             href={`https://news.ycombinator.com/vote?id=${data.id}&how=up&goto=item?id=${data.id}`}
             className={styles.upVote}
-          />
+          >
+            {" "}
+            {"▲"}{" "}
+          </a>
         </td>
-        <td>
+        <td valign="top">
           {data.type === "comment" ? (
             <span>
               {data.user && (
