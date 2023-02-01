@@ -77,9 +77,9 @@ export default function ListNewsItem(props: News): JSX.Element {
             {props.user && (
               <>
                 {" by "}
-                <a href={`user?id=${props.user}`} className={styles.commonlink}>
+                <Link to={`/user/${props.user}`} className={styles.commonlink}>
                   {props.user}
-                </a>
+                </Link>
               </>
             )}
             <span title={new Date(props.time * 1000).toLocaleString()}>

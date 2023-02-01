@@ -86,9 +86,9 @@ function Comment(
         </td>
         <td>
           <span>
-            <a href={`user?id=${props.user}`} className={styles.commonlink}>
+            <Link to={`/user/${props.user}`} className={styles.commonlink}>
               {props.user}
-            </a>
+            </Link>
             <span title={new Date(props.time * 1000).toLocaleString()}>
               {" "}
               <Link to={`/item/${props.id}`} className={styles.commonlink}>
@@ -197,9 +197,9 @@ export default function Item() {
           {data.type === "comment" ? (
             <span>
               {data.user && (
-                <a href={`user?id=${data.user}`} className={styles.commonlink}>
+                <Link to={`/user/${data.user}`} className={styles.commonlink}>
                   {data.user}
-                </a>
+                </Link>
               )}
               <span title={new Date(data.time * 1000).toLocaleString()}>
                 {" "}
@@ -245,12 +245,9 @@ export default function Item() {
               {data.user && (
                 <>
                   {" by "}
-                  <a
-                    href={`user?id=${data.user}`}
-                    className={styles.commonlink}
-                  >
+                  <Link to={`/user/${data.user}`} className={styles.commonlink}>
                     {data.user}
-                  </a>
+                  </Link>
                 </>
               )}
               <span title={new Date(data.time * 1000).toLocaleString()}>
