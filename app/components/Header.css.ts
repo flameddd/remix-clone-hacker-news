@@ -34,8 +34,15 @@ export const linkIndex = style({
 });
 
 export const links = style({
-  flex: "0 1 auto",
+  flex: "1 0 auto",
   whiteSpace: "nowrap",
+  display: "flex",
+  gap: 4,
+  paddingRight: 4,
+});
+
+export const extraLink = style({
+  marginLeft: "auto",
 });
 
 export const link = style({

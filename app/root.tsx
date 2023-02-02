@@ -12,13 +12,12 @@ import { cssBundleHref } from "@remix-run/css-bundle";
 export const links: LinksFunction = () => {
   return [
     ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-    // ...
   ];
 };
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Remix clone Hacker News",
   viewport: "width=device-width,initial-scale=1, maximum-scale=1",
 });
 

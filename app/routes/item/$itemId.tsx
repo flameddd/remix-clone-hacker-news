@@ -1,6 +1,6 @@
 import type { LoaderArgs } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
-import { useLoaderData, Link, useLocation } from "@remix-run/react";
+import { useLoaderData, Link } from "@remix-run/react";
 import { useState } from "react";
 
 import * as styles from "~/components/ListNewsItem.css";

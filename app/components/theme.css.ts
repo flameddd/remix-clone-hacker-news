@@ -11,17 +11,3 @@ export const vars = createGlobalTheme(":root", {
     text3: "#828282",
   },
 });
-
-// bg
-// #FFFFFF  3
-// #F6F6EF  2
-// #FF6600  1
-
-// text color
-// #828282  3
-// #222222  2
-// #000000  1
-
-// border color
-// #FFFFFF  2
-// #767676  1

@@ -35,5 +35,5 @@ export const tdIndent = style({
 
 export const contentWrap = style({
   overflowWrap: "anywhere",
-  wordBreak: "break-word", // for MacOS/iOS safari
+  wordBreak: "break-word",
 });
