@@ -2,8 +2,6 @@
 
 ## [Live Demo](https://remix-clone-hacker-news.flameddd1.workers.dev/)
 
-<h2><a target="_blank" href="https://remix-clone-hacker-news.flameddd1.workers.dev/"></a></h2>  
-
 ----------------
 This Demo app built with following tech
 - [GitHub Codespaces](https://docs.github.com/en/codespaces): Cloud development, (via my old 2011 MBA, 1.4G CPU, 4G RAM)
