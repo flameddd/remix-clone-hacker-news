@@ -14,13 +14,12 @@ export default function Header() {
           width="18"
           height="18"
           alt="Remix.run Logo"
-          title="-> Go to Remix.run"
           className={styles.logo}
         />
       </Link>
       <div className={styles.navs}>
         <Link to="/" className={styles.linkIndex}>
-          Remix.run Hacker News
+          Remix clone Hacker News
         </Link>
         <div className={styles.links}>
           <NavLink to="/new" className={navLinkStyle}>

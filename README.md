@@ -18,6 +18,10 @@ Refs:
 - [Solid Hacker News](https://github.com/solidjs/solid-hackernews)
 - [remix-jokes](https://github.com/remix-run/remix-jokes)
 
+<p align="center">
+  <img width="100%" loading="lazy" src="./SC-01.png" >
+</p>
+
 
 ----------------
 
@@ -33,5 +37,15 @@ Open up [http://127.0.0.1:8787](http://127.0.0.1:8787)
 
 ----------------
 
+## More screenshots
+
+![](././SC-02.png)  
+
+||||
+| :------: | :------: | :------: |
+| <img src="./SC-03.jpg"> | <img src="./SC-04.jpg"> | <img src="./SC-05.jpg"> |
+
+----------------
+
 ## License
-MIT
+**MIT**
