@@ -6,8 +6,7 @@
 
 ----------------
 This Demo app built with following tech
-- [GitHub Codespaces](https://docs.github.com/en/codespaces): Cloud development 
-  - (Via my old 2011 MBA, 1.4G CPU, 4G RAM)
+- [GitHub Codespaces](https://docs.github.com/en/codespaces): Cloud development, (via my old 2011 MBA, 1.4G CPU, 4G RAM)
 - [Remix.run](https://remix.run/): Server-side web framework
 - [Cloudflare Workers](https://workers.cloudflare.com/): Host, serverless
 - [Vanilla-extract](https://vanilla-extract.style/): Styling
