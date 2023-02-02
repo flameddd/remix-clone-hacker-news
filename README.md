@@ -2,6 +2,8 @@
 
 ## [Live Demo](https://remix-clone-hacker-news.flameddd1.workers.dev/)
 
+<h2><a target="_blank" href="https://remix-clone-hacker-news.flameddd1.workers.dev/"></a></h2>  
+
 ----------------
 This Demo app built with following tech
 - [GitHub Codespaces](https://docs.github.com/en/codespaces): Cloud development 
@@ -27,10 +29,10 @@ Refs:
 
 ## Development:
 1. Clone repo
-> git clone 
+> git clone https://github.com/flameddd/remix-clone-hacker-news.git
 
 2. Install and launch
-> npm install
+> npm install  
 > npm run dev
 
 Open up [http://127.0.0.1:8787](http://127.0.0.1:8787)
