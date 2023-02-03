@@ -38,7 +38,7 @@ export default function Header() {
             jobs
           </NavLink>
           <a
-            href="https://github.com/"
+            href="https://github.com/flameddd/remix-clone-hacker-news"
             target="_blank"
             className={`${styles.link} ${styles.extraLink}`}
           >
