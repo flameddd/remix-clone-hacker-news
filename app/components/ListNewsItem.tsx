@@ -95,6 +95,7 @@ export default function ListNewsItem(props: News): JSX.Element {
                 {" | "}
                 <Link
                   to={`/item/${props.id}`}
+                  prefetch="intent"
                   className={`${styles.commonlink} ${styles.title}`}
                   dangerouslySetInnerHTML={{
                     __html: `${props.comments_count}&nbsp;comments`,
