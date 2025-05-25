@@ -1,4 +1,4 @@
-import type { LoaderArgs } from "@remix-run/cloudflare";
+import type { LoaderArgs, MetaFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData, Link } from "@remix-run/react";
 import { useState } from "react";
@@ -61,6 +61,14 @@ export const loader = async ({ params }: LoaderArgs) => {
   }
 
   return json(await res.json());
+};
+
+export const meta: MetaFunction<typeof loader> = ({
+  data,
+}) => {
+  return {
+    title: (data as itemType)?.title || ""
+  };
 };
 
 function Comment(
